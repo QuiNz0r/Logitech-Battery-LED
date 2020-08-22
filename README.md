@@ -11,7 +11,7 @@ Small app to change RGB LED on Logitech Wireless Mice within Logitech G Hub acco
 - Logitech G Hub Software (2020.6.58918)
 
 # Limitations
-- Since the Logitech SDK doesn't provide battery status the value is read directly from Memory, thus the pointer offsets need to be updated most likely after Logitech updates their Software
+- Since the Logitech SDK doesn't provide battery status the value is read directly from Memory, thus the pointer offsets needs to be updated most likely after Logitech updates their Software
 - Only 64 bit is supported
 - Only one Mouse supported (first one connected)
 
@@ -20,5 +20,5 @@ Small app to change RGB LED on Logitech Wireless Mice within Logitech G Hub acco
 - Alpha Mode will also decrease the brightness of the logo as the battery charge lowers
 
 # Offset
-If you're only here for the Battery Memory Pointer (which is oddly a float) here you go:
-(lghub_agent.exe + 0x015C5048) + 0x10) + 0x0) + 0x30) + 0x58 + 0x2E8) + 0x0) + 0x1B8) + 0x28) + 0x170) + 0x0) + 0x450) + 0x30) + 0x30) + 0x90) + 0x348)
+If you're only here for the Battery Memory Pointer (which is oddly a float):
+(lghub_agent.exe + 0x015C5048) + 0x10) + 0x0) + 0x30) + 0x58) + 0x2E8) + 0x0) + 0x1B8) + 0x28) + 0x170) + 0x0) + 0x450) + 0x30) + 0x30) + 0x90) + 0x348)
