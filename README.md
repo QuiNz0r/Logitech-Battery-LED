@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="460" height="300" src="https://i.imgur.com/YygJvlX.png">
+</p>
 ![Image of Yaktocat](https://i.imgur.com/YygJvlX.png)
 
 # Logitech-Battery-LED
