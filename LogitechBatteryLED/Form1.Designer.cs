@@ -63,21 +63,21 @@
             this.AlphaMode,
             this.Exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 48);
             // 
             // AlphaMode
             // 
             this.AlphaMode.Checked = true;
             this.AlphaMode.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AlphaMode.Name = "AlphaMode";
-            this.AlphaMode.Size = new System.Drawing.Size(180, 22);
+            this.AlphaMode.Size = new System.Drawing.Size(160, 22);
             this.AlphaMode.Text = "AlphaMode: ON";
             this.AlphaMode.Click += new System.EventHandler(this.AlphaMode_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(160, 22);
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -90,7 +90,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);

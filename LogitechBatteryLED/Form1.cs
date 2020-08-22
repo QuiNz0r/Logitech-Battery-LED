@@ -127,12 +127,6 @@ namespace LogitechBatteryLED
             }
         }
 
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-            notifyIcon1.Visible = true;
-            Hide();
-        }
 
         private void Exit_Click(object sender, EventArgs e)
         {
