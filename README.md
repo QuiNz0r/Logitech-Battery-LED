@@ -13,6 +13,7 @@ Small app to change RGB LED on Logitech Wireless Mice within Logitech G Hub acco
 - .NET 4.7.2+
 - LogitechLedEnginesWrapper.dll (64bit)
 - Logitech G Hub Software (2020.6.58918)
+- Windows 7+ Operating System
 
 # Limitations
 - Since the Logitech SDK doesn't provide battery status the value is read directly from Memory, thus the pointer offsets needs to be updated most likely after Logitech updates their Software
