@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogitechBatteryLED", "LogitechBatteryLED\LogitechBatteryLED.csproj", "{7EC2F654-36C3-4542-A262-52836B3F150A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Debug|x64.ActiveCfg = Debug|x64
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Debug|x64.Build.0 = Debug|x64
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Release|x64.ActiveCfg = Release|x64
+		{7EC2F654-36C3-4542-A262-52836B3F150A}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {288BAB2E-3BD4-4483-A11C-ECBA22020C81}
+	EndGlobalSection
+EndGlobal
