@@ -3,7 +3,7 @@
 </p>
 
 # Logitech-Battery-LED
-Small app to change RGB LED on Logitech Wireless Mice within Logitech G Hub according to battery charge
+Small .NET C# app to change RGB LED on Logitech Wireless Mice within Logitech G Hub according to battery charge
 
 # Dependencies
 - Memory.dll
