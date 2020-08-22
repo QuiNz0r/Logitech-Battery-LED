@@ -32,3 +32,6 @@ Tested with:
 # Offset
 If you're only here for the Battery Memory Pointer (which is oddly a float):
 (lghub_agent.exe + 0x015C5048) + 0x10) + 0x0) + 0x30) + 0x58) + 0x2E8) + 0x0) + 0x1B8) + 0x28) + 0x170) + 0x0) + 0x450) + 0x30) + 0x30) + 0x90) + 0x348)
+
+# Download
+https://github.com/QuiNz0r/Logitech-Battery-LED/releases/download/1.1/LogitechBatteryLED1.1.zip
