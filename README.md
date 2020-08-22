@@ -24,7 +24,8 @@ Small .NET C# app to change RGB LED on Logitech Wireless Mice within Logitech G 
 - Changes RGB Logo color of Mouse according to Battery Charge (from green to red)
 - Alpha Mode will also decrease the brightness of the logo as the battery charge lowers
 
-#Tested with
+# Compatible Devices
+Tested with:
 - Logitech G Pro Lightspeed
 - Logitech g502 Lightspeed
 
