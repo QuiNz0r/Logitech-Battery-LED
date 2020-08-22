@@ -139,6 +139,7 @@ namespace LogitechBatteryLED
             _alphaMode = !_alphaMode;
             AlphaMode.Checked = _alphaMode;
             AlphaMode.Text = "AlphaMode: " + (_alphaMode ? "ON" : "OFF");
+            SetColor(_batteryCharge);
         }
 
     }
