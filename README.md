@@ -1,5 +1,6 @@
-# Logitech-Battery-LED
 ![Image of Yaktocat](https://i.imgur.com/YygJvlX.png)
+
+# Logitech-Battery-LED
 Small app to change RGB LED on Logitech Wireless Mice within Logitech G Hub according to battery charge
 
 # Dependencies
