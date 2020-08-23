@@ -11,7 +11,7 @@ namespace LogitechBatteryLED
     {
         private Mem _memory = new Mem();
         private BackgroundWorker _backgroundWorker = new BackgroundWorker();
-        private int _checkIntervalms = 5000;
+        private int _checkIntervalms = 10000;
         private bool _alphaMode = true;
         private bool _logiSDKInit = false;
         private float _batteryCharge = 50;
@@ -24,7 +24,6 @@ namespace LogitechBatteryLED
             _backgroundWorker.RunWorkerAsync();
         }
 
-        /*
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = sender as BackgroundWorker;
@@ -33,7 +32,6 @@ namespace LogitechBatteryLED
             {
                 if (!_logiSDKInit)
                 {
-                    LogitechGSDK.LogiLedShutdown();
                     int pid = _memory.GetProcIdFromName("lghub_agent");
                     if (pid <= 0)
                     {
@@ -43,6 +41,7 @@ namespace LogitechBatteryLED
                     }
                     else
                     {
+                        Thread.Sleep(2000);
                         InitializeLogiSDK();
                     }
                 }
@@ -53,38 +52,14 @@ namespace LogitechBatteryLED
                 Thread.Sleep(_checkIntervalms);
             }
         }
-        */
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            BackgroundWorker worker = sender as BackgroundWorker;
-
-            while (true)
-            {
-                if (!_logiSDKInit)
-                {
-                    InitializeLogiSDK();
-                    if (!_logiSDKInit)
-                    {
-                        Console.WriteLine("looking for lghub...");
-                        Thread.Sleep(1000);
-                        continue;
-                    }
-                }
-
-                Console.WriteLine("reading memory...");
-                ReadBatteryStatus();
-                SetColor(_batteryCharge);
-                Thread.Sleep(_checkIntervalms);
-            }
-        }
-
 
         void InitializeLogiSDK()
         {
             LogitechGSDK.LogiLedShutdown();
             _logiSDKInit = LogitechGSDK.LogiLedInitWithName("Battery LED");
-            if (_logiSDKInit) Console.WriteLine("LED SDK Initialized");
+            if (!_logiSDKInit) return;
+            
+            Console.WriteLine("LED SDK Initialized");
             LogitechGSDK.LogiLedSetTargetDevice(LogitechGSDK.LOGI_DEVICETYPE_RGB);
             LogitechGSDK.LogiLedSetLightingForTargetZone(DeviceType.Mouse, 1, 100, 100, 100);
         }
@@ -96,6 +71,8 @@ namespace LogitechBatteryLED
 
         void SetColor(float batteryPercentage)
         {
+            if (batteryPercentage <= 0) return;
+
             float Alpha = (batteryPercentage + 5) / 100; // 5 = offset alpha
             float Rlower = 100;
             float Glower = batteryPercentage * 2;
@@ -143,7 +120,10 @@ namespace LogitechBatteryLED
             if (openProc)
             {
                 _batteryCharge = _memory.ReadFloat("lghub_agent.exe+0x015C5048,0x10,0x0,0x30,0x58,0x2E8,0x0,0x1B8,0x28,0x170,0x0,0x450,0x30,0x30,0x90,0x348");
-                notifyIcon1.Text = "Logitech Battery LED " + (int)_batteryCharge + "%";
+                if (_batteryCharge < 0) 
+                    notifyIcon1.Text = "Logitech Battery LED ?%";
+                else 
+                    notifyIcon1.Text = "Logitech Battery LED " + (int)_batteryCharge + "%";
             }
             else
             {
