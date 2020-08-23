@@ -19,6 +19,7 @@ namespace LogitechBatteryLED
         public Form1()
         {
             InitializeComponent();
+            LogitechGSDK.LogiLedShutdown();
 
             _backgroundWorker.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
             _backgroundWorker.RunWorkerAsync();
@@ -26,8 +27,8 @@ namespace LogitechBatteryLED
 
         void InitializeLogiSDK()
         {
+            LogitechGSDK.LogiLedShutdown();
             _logiSDKInit = LogitechGSDK.LogiLedInitWithName("Battery LED");
-
             if (_logiSDKInit) Console.WriteLine("LED SDK Initialized");
             LogitechGSDK.LogiLedSetTargetDevice(LogitechGSDK.LOGI_DEVICETYPE_RGB);
         }
